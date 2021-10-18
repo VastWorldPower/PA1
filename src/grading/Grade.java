@@ -36,7 +36,10 @@ public final class Grade implements Comparable<grading.Grade> {
 	public Double getValue() { return value; }
 	
 	public String toString() {
-		return key + ": " + value;
+		if (value != null) {
+			return key + ":" + " " + String.format("%5.1f", value);
+		}
+		return key + ":" + " " + "   NA";
 	}
 
 	@Override
