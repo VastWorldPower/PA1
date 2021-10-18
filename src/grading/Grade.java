@@ -41,6 +41,10 @@ public final class Grade implements Comparable<grading.Grade> {
 
 	@Override
 	public int compareTo(Grade other) {
+		if (value == null && other.getValue() != null) { return -1; }
+		if (value == null && other.getValue() == null) { return 0; }
+		if (value != null && other.getValue() == null) { return 1; }
+		
 		return Double.compare(value, other.getValue());
 	}
 }
