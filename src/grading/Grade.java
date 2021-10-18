@@ -1,11 +1,12 @@
 package grading;
 
-public class Grade implements Comparable<grading.Grade> {
-	private String key;
-	private Double value;
+public final class Grade implements Comparable<grading.Grade> {
+	private final String key;
+	private final Double value;
 	
 	public Grade(String key) throws IllegalArgumentException {
 		this.key = key;
+		this.value = null;
 	}
 	
 	public Grade(String key, double value) throws IllegalArgumentException {
