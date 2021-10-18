@@ -10,7 +10,7 @@ public final class Grade implements Comparable<grading.Grade> {
 		}
 		
 		this.key = key;
-		this.value = null;
+		this.value = 0.0;
 	}
 	
 	public Grade(String key, double value) throws IllegalArgumentException {
